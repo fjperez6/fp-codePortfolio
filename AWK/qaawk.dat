@@ -1,0 +1,90 @@
+###DATA KEY###
+Question ID;
+Question text;
+A) Multiple Choice A;
+B) Multiple Choice B;
+C) Multiple Choice C;
+D) Multiple Choice D;
+Correct Answer letter;
+###DATA KEY###
+:::
+1;
+In a cgi POST method, values are read from?;
+A) /dev/stdin;
+B) QUERY_STRING;
+C) hidden form fields;
+D) Encoded URL;
+A;
+:::
+2;
+In /usr/bin/gawk -f what does the -f indicate?;
+A) Standard field separator;
+B) Create form;
+C) Use a file as input;
+D) Multiple input lines;
+C;
+:::
+3;
+What is the standard field seperator?;
+A) Single white space;
+B) =;
+C) Newline;
+D) Whitespace sequence;
+D;
+:::
+4;
+What is the standard field seperator?;
+A) Single white space;
+B) =;
+C) Newline;
+D) Whitespace sequence;
+D;
+:::
+5;
+What must be done to totally remove an element of an array;
+A) delete array[i];
+B) remove array[i];
+C) sub(/  /, " ", array);
+D) array[i]="";
+C;
+:::
+6;
+A cgi script will run as?;
+A) root;
+B) owner;
+C) httpd;
+D) apache;
+D;
+:::
+7;
+When calling shell commands within awk it's important to;
+A) use the entire path;
+B) use quotations;
+C) use uppercase letters;
+D) use backslash;
+A;
+:::
+8;
+What will getline var < file.txt do;
+A) assign file.txt to $0;
+B) changes NF to var;
+C) append var to file.txt;
+D) assign file.txt to var;
+D;
+:::
+9;
+The ip address of remote host is stored in;
+A) QUERY_STRING;
+B) REMOTE_ADDR;
+C) REMOTE_HOST;
+D) REMOTE_IP;
+B;
+:::
+10;
+The command print mydata >> myofname does what; 
+A) Prints content of myofname;
+B) Prints content of mydata to screen;
+C) appends mydata to myofname;
+D) replaces myofname with mydata;
+C;
+:::

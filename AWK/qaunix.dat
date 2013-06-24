@@ -1,0 +1,90 @@
+###DATA KEY###
+Question ID;
+Question text;
+A) Multiple Choice A;
+B) Multiple Choice B;
+C) Multiple Choice C;
+D) Multiple Choice D;
+Correct Answer letter;
+###DATA KEY###
+:::
+1;
+How do you get help on the cp command;
+A) man cp;
+B) help cp;
+C) cp ?;
+D) which cp;
+A;
+:::
+2;
+what is the command to search for the word gsub in test.cgi file;
+A) find "gsub" test.cgi;
+B) type "gsub" test.cgi;
+C) grep "gsub" test.cgi;
+D) find test.cgi "gsub";
+C;
+:::
+3;
+What does the command tail -15 test.cgi do;
+A) appends -15 to test.cgi;
+B) prints last 15 lines from test.cgi;
+C) deletes last 15 lines from test.cgi;
+D) changes test.cgi to test.cgi.15;
+B;
+:::
+4;
+How do you change the access permission (add group read/write)  to test.cgi;
+A) chmod g+rw test.cgi; 
+B) chmod 0060 test.cgi;
+C) chmod 777 test.cgi;
+D) setperm 0060 test.cgi;
+A;
+:::
+5;
+To rename the file old.cgi to new.cgi;
+A) rn old.cgi new.cgi;
+B) cp old.cgi new.cgi;
+C) cat old.cgi >> new.cgi;
+D) mv old.cgi new.cgi;
+D;
+:::
+6;
+To debug the syntax of an awk file;
+A) append $2 >> $1 to the command;
+B) view errors in /tmp/awk/errors;
+C) execute in command line;
+D) use -debug flag;
+C;
+:::
+7;
+This command does what ls *.cgi;
+A) displays permissions of the *.cgi;
+B) displays all files in dir with ending with .cgi;
+C) Searches for all files in filesystem ending with .cgi;
+D) displays contents of *.cgi;
+B;
+:::
+8;
+Which symbol will be used with grep command to match the pattern pat at the beginning of a line;
+A) ^pat;
+B) $pat;
+C) pat^;
+D) pat$;
+A;
+:::
+9;
+Which command is used to sort the lines of data in a file in reverse order;
+A) sort;
+B) sh -r;
+C) st -r;
+D) sort -r;
+A;
+:::
+10;
+Which command sends the word count of the file infile to the newfile;
+A) wc infile > newfile;
+B) wc newfile;
+C) wc infile - newfile;
+D) wc infile newfile;
+A;
+:::

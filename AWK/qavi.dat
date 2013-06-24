@@ -1,0 +1,90 @@
+###DATA KEY###
+Question ID;
+Question text;
+A) Multiple Choice A;
+B) Multiple Choice B;
+C) Multiple Choice C;
+D) Multiple Choice D;
+Correct Answer letter;
+###DATA KEY###
+:::
+1;
+cw in command mode does what;
+A) Performs a write to the file;
+B) changes the word;
+C) deletes the word;
+D) replaces the letter;
+B;
+:::
+2;
+/foo in command mode does what;
+A) highlights foo in current line;
+B) replaces foo in current line;
+C) highlights foo in entire file;
+D) replaces foo in entire file;
+C;
+:::
+3;
+What command will put a ! at the end of every line;
+A) g/!/^/g;
+B) :s/^/!/g;
+C) :s%/^/!/g;
+D) :g/./ s/$/!/g;
+D;
+:::
+4;
+This command inserts the output of a shell command;
+A) :r!;
+B) :!;
+C) :s/^/cmd/;
+D) [esc] cmd;
+A;
+:::
+5;
+Delete two words in command mode;
+A) cw;
+B) :del 2;
+C) dd;
+D) 2dw;
+D;
+:::
+6;
+Copy the current line and paste to the line below;
+A) cp p;
+B) :cp paste;
+C) yy p;
+D) :g/^/$/.;
+C;
+:::
+7;
+:e file.txt does what?;
+A) saves the current file as file.txt;
+B) opens file.txt in buffer;
+C) cats file.txt;
+D) inserts file.txt to current line;
+B;
+:::
+8;
+Delete all blank lines;
+A) :g/./ s/ /;
+B) :%s//^$/g;
+C) /^$ delete;
+D) :g/./ s/^$//;
+D;
+:::
+9;
+Go to the end of file;
+A) G;
+B) L;
+C) E;
+D) };
+A;
+:::
+10;
+Undo previous change;
+A) :previous;
+B) :last;
+C) q!;
+D) u;
+D;
+:::
