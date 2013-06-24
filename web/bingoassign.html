@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .mytable {
+        border:1px solid #000000;
+        border-collapse:collapse;
+        width:200px;
+      }
+      .mytable td{
+        border:1px solid #000000;
+      }
+    </style>
+    <script type="text/javascript">
+      //builds table based on user input
+      onload=function(){
+        var nrCols=2;
+        var maxRows=6;
+        var nrRows=maxRows+1;
+        while(nrRows>maxRows){
+        nrRows=Number(prompt('How many rows? Maximum '+maxRows+' allowed.',''));
+        } 
+        var root=document.getElementById('mydiv');
+        var tab=document.createElement('table');
+        tab.className="mytable";
+        var tbo=document.createElement('tbody');
+        tbo.className="tbody";
+        var row, cell;
+        for(var i=0;i<nrRows;i++){
+          row=document.createElement('tr');
+          for(var j=0;j<nrCols;j++){
+            cell=document.createElement('td');
+            cell.appendChild(document.createTextNode(i+' '+j))
+            row.appendChild(cell);
+          }
+          tbo.appendChild(row);
+        }
+        tab.appendChild(tbo);
+        root.appendChild(tab);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="mydiv"></div>
+  </body>
+</html>

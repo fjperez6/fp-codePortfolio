@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script type="text/javascript">
+    //creates bingo card of randomized group of images.
+    //with static 'free' space and the first letter of 
+    //image name at the top left corner of bingo square
+    onload=function(){
+      var images = [];
+      var index = 0;
+      var root=document.getElementById('bingotable');
+      var rows = 4;
+      var cols = 4;
+      var row, cell, letter;
+      var freeImg = "http://uisacad5.uis.edu/~ksimo1/bingo/free.gif";
+      images = ["http://uisacad5.uis.edu/~ksimo1/bingo/bat.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/boo.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/candle.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/candy_corn.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/cat.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/witch.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/ghost.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/jackolantern.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/leaves.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/mummy.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/owl.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/pumpkin.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/scarecrow.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/skeleton.gif",
+                  "http://uisacad5.uis.edu/~ksimo1/bingo/spiderweb.gif"];
+
+      for (var r = 1; r <= rows; r++) { //loops to buld rows
+        row=document.createElement('tr');        
+        for (var c = 1; c <= cols; c++) { //loops to build columns
+          index = Math.floor(Math.random() * images.length);      
+          cell = document.createElement('td');
+          letterDiv = document.createElement('div');
+          var newImg = new Image();
+          if (r==2 && c==2) {  //sets static 'free' square at 2x2
+            newImg.src = freeImg;   
+            var text = document.createTextNode(freeImg.charAt(38));
+            letterDiv.appendChild(text);
+            cell.appendChild(letterDiv);
+            cell.appendChild(newImg);
+            row.appendChild(cell);
+            continue;
+          }
+          newImg.src = images[index];           
+          var text = document.createTextNode(images[index].charAt(38));
+          letterDiv.appendChild(text);
+          cell.appendChild(letterDiv);
+          cell.appendChild(newImg);
+          row.appendChild(cell);
+          images.splice(index,1);
+        } //end column loop
+        root.appendChild(row);
+      } //end row loop
+    } //exit function()   
+    </script>    
+    <style type="text/css">
+      img {
+        width:150px;
+        height:150px;
+        z-index: -1;
+        position: relative;
+        padding-left:20px;
+        padding-top: 20px;
+      }
+      td {
+        border-style: solid;
+        border-color: black;
+        height: 150px;
+        width: 150px;
+        position: relative;
+      }
+      div {
+        z-index: 2;
+        position: absolute;
+        color: blue;
+        font-family: Arial;
+        font-size: 30pt;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="bingotable" border="1">
+    </table>    
+  </body>
+</html>
