@@ -1,0 +1,40 @@
+README
+=========
+1.)
+Description of Algorithm
+                -three.scm
+                
+The main body of the function three.scm is the branching function cond. It takes as its input a
+single parameter, called ‘l’, composed of a list. The goal of the algorithm is to remove redundant
+elements in ‘l’ in order to have a list of unique elements.
+The first three conditions will return #f if there are less than three elements in the list. It performs
+this task by first testing if ‘l’ is null. The second condition tests if the cdr of ‘l’ is null, that means
+there is only one element. The third condition tests if cddr of ‘l’ is null, that means ‘l’ contains
+only two elements.
+The fourth condition tests if cdddr of ‘l’ is null. This determines that ‘l’ contains three elements.
+If true this goes into a nested cond function with four conditions. The first three elements of
+the nested cond checks for repeats. First, the first element is tested to the second element.
+Secondly, the first element is tested to the third. Third, the second element is tested to the third.
+If any of these are true it means there is a repeat in one of the three elements and three.scm will
+return #f. The final condition is else and makes three.scm return #t if no repeats are found within
+the three elements.
+The fifth, sixth and seventh conditions in the main cond removes repeats of the first element
+in the first four elements of ‘l’. It first checks if the first element is equal to the second element.
+Secondly it checks if the first element is equal to the third element. Third, it checks if the first
+element is equal to the fourth element. If any of these are true the cdr of ‘l’ is recursively sent to
+three.scm. This removes the car of ‘l’ and eliminates repeats.
+The eighth condition checks if the second and third element are equal. If true, it uses the cons
+function with the car of ‘l’ and the cddr of ‘l’ as the parameter to recursively send to three.scm.
+This removes the second element of ‘l’ to eliminate repeats between the second and third
+element.
+The ninth condition checks if the second and fourth element are equal. If true, it uses the cons
+function with the car of ‘l’ and the cddr of ‘l’ as the parameter to recursively send to three.scm.
+This removes the second element of ‘l’ to eliminate repeats between the second and fourth
+element.
+The tenth condition checks if the third and fourth element are equal. If true, it uses the cons
+function with the car of ‘l’ and a nested cons of the cadr of ‘l’ and the cdddr of ‘l’ as the
+parameter to recursively send to three.scm. This removes the third element of ‘l’ to eliminate
+repeats between the third and fourth element.
+The final condition of the main cond is else that causes three.scm to return #f. This condition
+returns true once all redundant elements are removed and there are more than three elements
+in ‘l’.
