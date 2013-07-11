@@ -1,0 +1,40 @@
+SUMMARY
+
+salesreport is a program that allows you to generate sales reports
+and update sales information to/from sqlite database file. 
+
+FILES
+
+In this distribution, you will find:
+
+salesreport.pl				- Main Perl script
+README						- This file. Instructions on how to use and install salesreport.pl
+sales.db					- SQLite database file
+NOTES						- Some notes on my experience writing this script
+sample.png					- Screenshot of final report
+
+CONFIGURATION
+
+There are currently no user configurable settings. This script relies on the following modules
+to run:
+			- Tk;
+			- Tk::DateEntry;
+			- Tk::ROText;
+			- Text::CSV;
+			- IO::File;
+			- DBI qw(:sql_types);
+			- POSIX qw(strftime);
+			- Time::Local;
+
+Please install these modules from CPAN prior to running salesreport.pl
+For the database please install:
+
+			-SQLite (3.7.13)
+
+USAGE
+
+Please run this program in the same directory where the sales.db file is stored. Otherwise
+the salesreport.pl generates a new sales.db file in the current directory. Please ensure
+sales.db file is accessible without a username or password. There is currently no way to set 
+these from the program.
+Double click the salesprogram.pl icon or run from the command line. 
