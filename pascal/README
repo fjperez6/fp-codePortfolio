@@ -1,0 +1,6 @@
+The pascal project is for a class on analyzing empiracal data. 
+roulette.pas makes use of a series of commented loops to simulate a game of roulette.  
+the principal loop runs according to user input. Matching statements will then         
+increment a specific counter to answer the assignment's 3 questions.			
+This program uses no external input or output file.					}
+Compiled and tested with: 'Free Pascal Compiler version 2.6.0-6 [2012/10/05] for i386'	
